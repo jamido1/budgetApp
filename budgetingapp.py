@@ -35,14 +35,14 @@ class Category:
 def init():
     print('  ***********Welcome to BudgetApp************\nWhat would you wanna do?')
     print("******" * 40)
-    originator = int(input('Press 1:To Create budget, 2:To Check Budget, 3:To Quit: '))
+    originator = int(input('\nPress \n1:To Create budget, \n2:To Check Budget, \n3:To Quit:\n '))
 
     def depictor():
         cateName = Category(input('Enter your budget name: '))
         return cateName
 
     def operations():
-        call = int(input('Enter 1:Deposit, 2:Withdraw, 3:Balance, 4:Transfer, 5:To Start Again'))
+        call = int(input('\nEnter \n1:Deposit, \n2:Withdraw, \n3:Balance,\n4:Transfer, \n5:To Start Again\n'))
         if call == 1:
             amount = int(input('Enter amount to deposit: '))
             budget.deposit(amount)
@@ -92,7 +92,7 @@ def init():
         else:
             print('Invalid value, please try again ')
             init()
-        originator = int(input('\nPress 1:To Create budget, \n2:To Check Budget, \n3:To Quit: \n'))
+        originator = int(input('\nPress \n1:To Create budget, \n2:To Check Budget, \n3:To Quit: \n'))
 
 
 init()
